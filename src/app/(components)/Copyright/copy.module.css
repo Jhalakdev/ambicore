@@ -1,0 +1,87 @@
+.section {
+    height: 80px;
+    width: 100%;
+    background: black;
+}
+
+.wrapper {
+    height: 100%;
+    width: 1150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #cccccc;
+
+}
+
+.wrapper p {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.wrapper p a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.wrapper p a:hover {
+    text-decoration: underline;
+}
+.wrapper a{
+    color: white;
+}
+.wrapper div {
+    display: flex;
+    gap: 5px;
+}
+
+.wrapper .svgContainer {
+    /* display: inline-block; */
+    /* margin: 0 10px; */
+    fill: white;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 5px; */
+    transition: 0.2s ease-in-out;
+    border-radius: 2px;
+}
+
+.wrapper .svgContainer:hover {
+
+    background: white;
+}
+
+.wrapper .svgContainer:hover svg {
+    fill: black;
+    /* background: white; */
+}
+
+@media screen and (width<1150px) {
+    .wrapper {
+        width: 990px;
+    }
+}
+
+@media screen and (width<990px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media screen and (width<768px) {
+    .section {
+        height: max-content;
+        background: #0B0B0B;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        gap: 50px;
+        padding: 40px 0;
+    }
+
+}

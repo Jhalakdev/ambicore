@@ -1,0 +1,165 @@
+.section {
+    width: 100%;
+    background: var(--black);
+}
+
+.wrapper {
+    width: 1150px;
+    padding: 5rem 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--textColor);
+}
+
+.wrapper h2 {
+    font-size: 32px;
+    letter-spacing: 2.5px;
+    font-weight: 400;
+}
+
+.restaurants {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+
+    gap: 30px;
+    height: max-content;
+    position: relative;
+}
+
+.restaurantCard {
+    position: relative;
+    /* width: calc(100% / 3); */
+    width: 100%;
+    /* height: 450px; */
+    height: 100%;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rest1 {
+    transform: translate(-49%, 0);
+    opacity: 0;
+}
+
+.rest2 {
+    transform: translate(0, 50%);
+    opacity: 0;
+}
+
+.rest3 {
+    transform: translate(50%, 0);
+    opacity: 0;
+}
+
+.restaurantCard img {
+    height: 180px;
+    width: 100%;
+    background: #FAB207;
+}
+
+.restaurantCard h2 {
+    color: var(--yellow);
+    font-size: 21px;
+    display: inline-block;
+}
+
+.restaurantCard span {
+    font-size: 21px;
+    letter-spacing: 2.5px;
+}
+
+.wwdline {
+    text-align: center;
+    opacity: 0;
+    transform: translate(0, 40px);
+}
+
+.restaurantCard p {
+    color: #dddddd;
+    font-size: 15px;
+    line-height: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rest2 p {
+    transform: translate(0, 50%);
+    opacity: 0;
+}
+
+@media screen and (width<1150px) {
+    .wrapper {
+        width: 990px;
+    }
+}
+
+@media screen and (width<990px) {
+    .wrapper {
+        width: 90%;
+        margin: auto;
+    }
+
+    .restaurantCard h2,
+    .restaurantCard span {
+        font-size: 16px;
+    }
+
+    .restaurantCard p {
+        margin-top: 10px;
+        font-size: 13px;
+        letter-spacing: 0.7px;
+    }
+
+    .restaurantCard {
+        height: 100%;
+    }
+
+    .restaurants {
+        gap: 30px;
+    }
+}
+
+@media screen and (width<768px) {
+    .restaurants {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .restaurantCard {
+        height: max-content;
+        width: 100%;
+        gap: 0;
+    }
+
+    .restaurantCard img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .restaurants {
+        gap: 20px;
+    }
+
+    .restaurantCard h2 {
+        font-size: 20px;
+    }
+
+    .restaurantCard span {
+        font-size: 20px;
+    }
+
+    .restaurantCard p {
+        margin: 0;
+        line-height: 25px;
+        margin: 30px 0;
+        margin-top: 10px
+    }
+
+}

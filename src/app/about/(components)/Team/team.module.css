@@ -1,0 +1,97 @@
+.section {
+    background: #111111;
+    padding: 5rem 0;
+}
+
+.wrapper {
+    width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.card {
+    aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardImage {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .8s ease-in-out;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: var(--textColor);
+    transition: .5s ease-in-out;
+    background: #111111;
+    padding: 30px 0 0 30px;
+}
+
+.content span {
+    height: 1px;
+    width: 60px;
+    background: var(--yellow);
+    display: block;
+}
+
+.cardImage img {
+    height: 100%;
+    width: 100%;
+}
+
+.card:hover .cardImage {
+    top: -100%;
+}
+
+.card:hover .content {
+    top: 0;
+}
+
+.content h2 {
+    letter-spacing: 4px;
+    font-size: 16px;
+}
+
+.content p {
+    margin: 10px 0;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.content>div {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+@media screen and (width<1150px) {
+    .wrapper {
+        width: 990px;
+
+    }
+}
+
+@media screen and (width<990px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        width: 85%;
+    }
+}
+
+@media screen and (width<768px) {
+    .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

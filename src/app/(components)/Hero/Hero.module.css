@@ -1,0 +1,118 @@
+.section {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    position: relative;
+}
+
+.imageContainer {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+.imageContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.wrapper {
+    position: relative;
+    width: 1150px;
+    height: 100%;
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.text {
+    color: var(--textColor);
+    margin-left: 40px;
+    width: max-content;
+    display: block;
+}
+
+.text p {
+    font-size: 20px;
+    display: block;
+    letter-spacing: 5px;
+    transform: translate(0,-50px);
+    opacity: 0;
+}
+
+.text h2 {
+    font-size: 75px;
+    font-weight: 200;
+    margin: 20px 0;
+    letter-spacing: 5px;
+    opacity: 0;
+    transform: scale(1.5);
+    transform-origin: left;
+}
+
+.text button {
+    
+    padding: 10px 40px;
+    background: transparent;
+    border: 2px solid white;
+    color: var(--textColor);
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+}
+.text div{
+    transform: translate(0,50px);
+    opacity: 0;
+}
+.text button:hover {
+    background: white;
+    color: black;
+}
+
+@media screen and (width<1150px) {
+    .wrapper {
+        width: 900px;
+    }
+}
+
+@media screen and (width<990px) {
+    .wrapper {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (width<768px) {
+    .wrapper {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text {
+        margin: 0;
+    }
+
+    .text h2 {
+        transform-origin: center;
+        font-size: 10dvw;
+        margin: 10px 0;
+    }
+
+    .text button {
+        font-size: 12px;
+        padding: 7px 20px;
+    }
+}
