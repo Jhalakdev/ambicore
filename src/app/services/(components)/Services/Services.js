@@ -96,7 +96,7 @@ export default function Services() {
                 </Link>
             </div>
             <div className={style.image}>
-                <img src='https://ambicorspace.com/wp-content/uploads/2016/06/subheader-2.jpg' />
+                <img src='/subheader-2.jpg' />
             </div>
         </div>
 
